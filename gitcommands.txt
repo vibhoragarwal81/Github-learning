@@ -1,0 +1,43 @@
+mkdir myrepo
+cd myrepo
+git init
+git status -> no files to be tracked or added
+code readme.md -> added a new file in the git repo which is currently not tracked
+git add readme.md -> add the file to git tracker 
+git status -> readme.md is now in the tracked state
+git commit -m "commit message" -> commit the files (not giving a commit message will abort the commit)
+git status -> no files to be tracked or added
+add random multiple file 
+git add . -> add all files to git tracker by using wildcard
+git log -> show the previous commits with the messages
+ls -al ~/.ssh  -> to check if there are previously created ssh keys exist
+ssh-keygen -t rsa -b 4096 -C "vibhor.agarwal7@gmail.com"  -> create a new ssh key
+eval $(ssh-agent -s)  -> to check if ssh agent is running on local machine
+ssh-add ~/.ssh/id_rsa  --> add the identity to ssh key
+goto github.com to login with your profile and goto this page https://github.com/settings/keys
+goto your local folder when you have done git init and goto .ssh folder
+copy the content from id_rsa_pub file. Create a new ssh key in github. paste the content there and save
+ssh -T git@github.com  -> add github for safe ssh provider
+git clone git@github.com:gillcleeren/expert-fiesta.git
+git push origin main  -> push all locally commited changes to origin(remote) main branch
+git fetch --> check the status if remote(origin) is ahead of the local branch by some commits
+git merge --> merge the two branches remote and local
+git pull --> fast forward the local to all commits that are made on remote (pull = fetch + merge)
+if changes are made at both ends simultaneously than the command git push will give error 
+in that case first do the git pull -->then do git status --> then do git push origin main
+git branch [branchname] --> to create a new branch (this doesn't automatically switch to newly created branch)
+git checkout -b [branchname] --> if this branch doesn't exist, git will create it and switch to it as well
+add a new file in this branch or update any existing file (git switch -c ) is also same functionality
+check git status 
+git commit -am "new-instruction-added"
+git push -u origin add-more-instruction[remote branchname same as local branchname that was added as part of checkout]
+this doesn't automatically update origin[main] it just show compare and pull option on remote
+it is possible to turn a repository into a template to create other repositories based on it
+settings -> general settings -> template repository click checkbox [this new repository will not be linked to existing one]
+git switch main -->switch back to main branch
+git branch --delete [branchname]
+git config --global init.defaultBranch main --> use main as default name for branch
+ls -lah --> see hidden files in directory
+rm -r .git --> remove local hidden folder git
+sudo rm -rf myrepo --> delete the parent git folder
+git config --global --add safe.directory /home/ec2-user/myrepo/Github-learning/  --> for the dubious ownership exception
