@@ -1,3 +1,7 @@
+three tools needed 1) git download from git-scm 2) code editor like visual studio code 3) github account
+git config --global user.name "Vibhor Agarwal"
+git config --global user.email "vibhor.agarwal7@gmail.com"
+git config --edit --global
 mkdir myrepo
 cd myrepo
 git init
