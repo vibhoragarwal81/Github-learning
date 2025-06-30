@@ -41,3 +41,13 @@ ls -lah --> see hidden files in directory
 rm -r .git --> remove local hidden folder git
 sudo rm -rf myrepo --> delete the parent git folder
 git config --global --add safe.directory /home/ec2-user/myrepo/Github-learning/  --> for the dubious ownership exception
+ls -lah --> see hidden files in directory
+rm -r .git --> remove local hidden folder git
+sudo rm -rf myrepo --> delete the parent git folder
+https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
+if there is error error: cannot lock ref than use the below command
+git fetch --prune --> this will fetch updates and kill remote tracking branches in local repo
+if there are still errors, manually cleanup the problematic references
+git remote show origin --> 
+delete stale reference 
+git update-ref -d refs/remotes/origin/<branchName>
